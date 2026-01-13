@@ -50,6 +50,11 @@
   <exec_depend>rviz2</exec_depend>
   <exec_depend>rviz_common</exec_depend>
   <exec_depend>rviz_default_plugins</exec_depend>
+<<<<<<< HEAD
+=======
+  <exec_depend>moveit_servo</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+>>>>>>> 2569ad2 (feat: control)
 
 
   <export>

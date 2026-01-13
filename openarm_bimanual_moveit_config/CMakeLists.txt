@@ -27,4 +27,20 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/launch")
 endif()
 
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
+<<<<<<< HEAD
 install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
+=======
+install(FILES .setup_assistant README.md DESTINATION share/${PROJECT_NAME})
+
+# Install scripts directory
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/scripts")
+  install(
+    PROGRAMS
+      scripts/end_effector_pose_controller.py
+      scripts/keyboard_control.py
+      scripts/start_keyboard_control.sh
+      scripts/test_pose_control.py
+    DESTINATION lib/${PROJECT_NAME}
+  )
+endif()
+>>>>>>> 2569ad2 (feat: control)

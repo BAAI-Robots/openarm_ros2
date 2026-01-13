@@ -226,11 +226,29 @@ def generate_launch_description():
 
     moveit_params = moveit_config.to_dict()
 
+<<<<<<< HEAD
+=======
+    # Add trajectory execution parameters explicitly
+    moveit_params.update({
+        "trajectory_execution.allowed_execution_duration_scaling": 1.2,
+        "trajectory_execution.allowed_goal_duration_margin": 0.5,
+        "trajectory_execution.allowed_start_tolerance": 0.01,
+        "trajectory_execution.execution_duration_monitoring": True,
+        "trajectory_execution.controller_manager_ns": "/controller_manager",
+    })
+
+>>>>>>> 2569ad2 (feat: control)
     run_move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
         parameters=[moveit_params],
+<<<<<<< HEAD
+=======
+        remappings=[
+            ("/controller_manager", "/controller_manager"),
+        ],
+>>>>>>> 2569ad2 (feat: control)
     )
 
     rviz_cfg = os.path.join(

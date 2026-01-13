@@ -1,0 +1,20 @@
+# Trajectory Execution Configuration
+trajectory_execution:
+  allowed_execution_duration_scaling: 1.2
+  allowed_goal_duration_margin: 0.5
+  allowed_start_tolerance: 0.01
+
+# Planning Scene Monitor Configuration  
+planning_scene_monitor_options:
+  name: "planning_scene_monitor"
+  robot_description: "robot_description"
+  joint_state_topic: "/joint_states"
+  attached_collision_object_topic: "/moveit_cpp/planning_scene_monitor"
+  publish_planning_scene_topic: "/moveit_cpp/publish_planning_scene"
+  monitored_planning_scene_topic: "/moveit_cpp/monitored_planning_scene"
+  wait_for_initial_state_timeout: 10.0
+
+# Move Group Capabilities
+move_group:
+  capabilities: ""
+  disable_capabilities: ""

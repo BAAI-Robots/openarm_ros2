@@ -259,28 +259,16 @@ def generate_launch_description():
     # Timing and sequencing
     LAUNCH_DELAY_SECONDS = 1.0
     delayed_joint_state_broadcaster = TimerAction(
-<<<<<<< HEAD
         period=LAUNCH_DELAY_SECONDS,
-=======
-        period=1.0,
->>>>>>> 2569ad2 (feat: control)
         actions=[joint_state_broadcaster_spawner],
     )
 
     delayed_robot_controller = TimerAction(
-<<<<<<< HEAD
         period=LAUNCH_DELAY_SECONDS,
         actions=[controller_spawner_func],
     )
     delayed_gripper_controller = TimerAction(
         period=LAUNCH_DELAY_SECONDS,
-=======
-        period=2.0,
-        actions=[controller_spawner_func],
-    )
-    delayed_gripper_controller = TimerAction(
-        period=3.0,
->>>>>>> 2569ad2 (feat: control)
         actions=[gripper_controller_spawner],
     )
 

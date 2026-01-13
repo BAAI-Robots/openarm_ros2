@@ -17,10 +17,17 @@ controller_manager:
   ros__parameters:
     update_rate: 100 # Hz
 
+<<<<<<< HEAD
     left_arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
     right_arm_controller:
+=======
+    left_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    right_joint_trajectory_controller:
+>>>>>>> 2569ad2 (feat: control)
       type: joint_trajectory_controller/JointTrajectoryController
 
     left_gripper_controller:
@@ -32,7 +39,11 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
+<<<<<<< HEAD
 left_arm_controller:
+=======
+left_joint_trajectory_controller:
+>>>>>>> 2569ad2 (feat: control)
   ros__parameters:
     joints:
       - openarm_left_joint1
@@ -49,7 +60,11 @@ left_arm_controller:
       - velocity
       - effort
 
+<<<<<<< HEAD
 right_arm_controller:
+=======
+right_joint_trajectory_controller:
+>>>>>>> 2569ad2 (feat: control)
   ros__parameters:
     joints:
       - openarm_right_joint1
@@ -82,4 +97,8 @@ right_gripper_controller:
     command_interfaces:
       - position
     state_interfaces:
+<<<<<<< HEAD
       - position
+=======
+      - position
+>>>>>>> 2569ad2 (feat: control)
